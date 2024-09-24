@@ -36,5 +36,19 @@ class Program
         int difficultyLevelInt = (int)difficultyLevel;
         Console.WriteLine(difficultyLevel);
         Console.WriteLine(difficultyLevelInt);
+
+        Console.WriteLine(OperacoesMatematicas.AdicionarInline(val1: 10, val2:5));
+        (int resultadoAdicao, string nome) = OperacoesMatematicas.AdicionarMultipleReturn(val1: 5, val2: 5);
+        Console.WriteLine(nome + " obteve o resultado de "+ resultadoAdicao);
+        OperacoesMatematicas.optionalParams(10);
+
+        var carro = new Carro("Corolla")
+        {
+            LancadoEm = new DateOnly(2015, 1, 1),
+            Cor = Cor.Branco,
+        };
+        carro.Detalhes();
+        
+
     }
 }
